@@ -1,3 +1,6 @@
+
+
+
 <head>
 <title>Emelie Hallenberg</title>
 
@@ -18,9 +21,9 @@
         CV & Karriärmål</a></li>
       <li><a href="#kontakt">
         Kontakt</a></li>
-
-
-  
+      </nav>
+      <button id="mode">Dark Mode</button>
+      
   </header>
     
     <hr>
@@ -43,15 +46,15 @@
   
 
    <h2>CV & Karriärmål</h2>
-   <div class="text"><p>
+   <div class="text"><p class=infotext>
      Jag utbildade mig till bibliotekarie vid Uppsala universitet och jobbade som det i cirka sju års tid innan jag växlade över till programmering och webbutveckling. 
    <br>   ...och där befinner jag mig just nu! 
       <br> Det som tilltalar mig med programmering/utveckling är att få vara kreativ och lösa problem. Det finns också möjligheter både att arbeta självständigt och att samarbeta i ett team.<br>
-      Förutom min utbildning i <span class="kunskap">Microsoft 365</span> har jag lagt en hel del tid på att lära mig 
-      <ul>
-        <li class="kunskap">grundläggande JavaScript</li> <li class="kunskap">grundläggande HTML och CSS</li>
+      Förutom min utbildning i <span class="kunskap">Microsoft 365</span> lägger jag en hel del tid på att lära mig 
+  
+     <span class="kunskap">grundläggande JavaScript</span><br> & <br><span class="kunskap">grundläggande HTML och CSS</span
         
-     </ul></p> <p>I framtiden hoppas jag såklart kunna lära mig ännu mer!
+  </p> <p class="infotext">I framtiden hoppas jag såklart kunna lära mig ännu mer!
     </p>
     <iframe src="https://docs.google.com/document/d/e/2PACX-1vTfrqOT_Py3J0-AUPHhK4gFiRGeOaLTQ0Pl4pwiMezcctLDsHQg1hWTO2fnjQYsHg/pub?embedded=true"></iframe>
      
@@ -61,8 +64,9 @@
     <hr>
     <section id="kontakt">
       <h2>Kontakt</h2>
-      <div class="text"><p>
-        Kontakta mig gärna via <a href="https://www.linkedin.com/in/emelie-hallenberg-82404914a/">LinkedIn</a> eller via e-post: emeliehallenberg@gmail.com</p>
+      <div class="text">
+        <p class="infotext">
+          Kontakta mig gärna via </p><a href="https://www.linkedin.com/in/emelie-hallenberg-82404914a/">LinkedIn</a> <p class="infotext"> eller via e-post: emeliehallenberg@gmail.com</p>
     </div>
     </section>
   
@@ -104,6 +108,12 @@ a {
   color: slategrey;
   font-family: Tahoma;
 }
+    
+    #mode {
+  position: fixed;
+  right: 0;
+  top: 0;
+}
 
 a:hover {
   pointer: cursor;
@@ -125,8 +135,9 @@ h2 {
 
 p {
   line-height: 2.0rem;
-  font-family: Garamond;
-  font-size: 17px;
+  font-family: sans-serif;
+  font-size: 19px;
+  color: cadetblue;
 }
 
 .kunskap {
@@ -180,3 +191,24 @@ button:hover {
 }
     </style>
   
+  
+  <script>
+  
+
+const modeBtn = document.getElementById("mode");
+
+modeBtn.addEventListener('click', changeModeFunc);
+
+function changeModeFunc() {
+  if (modeBtn.innerHTML === "Dark Mode") {
+     document.body.style.background = "black";
+modeBtn.innerHTML = "Light Mode";
+
+  } else {
+    document.body.style.background = "blanchedalmond";
+modeBtn.innerHTML = "Dark Mode";
+  }
+ 
+
+}
+</script>
