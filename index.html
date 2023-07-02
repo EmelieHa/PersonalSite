@@ -19,7 +19,7 @@
 
    <img id="profil" src="https://lh3.googleusercontent.com/uu6u7FqnpPXEW3rbJ5Nc95-iOnZ7-LIaMNQb9cI6FUdSfVg9eua6VRGf_9cvVztkgVf-_WNdervyid5otf7QoRj5zbSs5jp4ktxJNLgKZVQSdxXBIRwla4MhRNnO2jLZvHnfKrx--Q=w600-h315-p-k"</img>
   <nav>
-    <ul>
+    <ul id='nav'>
       <li><a href="#info">
         Personlig information</a></li>
       <li><a href="#cv">
@@ -45,7 +45,7 @@
       <br>
       Jag har också hela mitt liv lagt mycket tid på att läsa - och även skriva egna texter. Föredrar klassisk litteratur, gärna engelska historiska romaner.
       <br>
-      Träning är också något jag ägnar mig åt flera gånger i veckan. Det är en bra ventil för att koppla bort oroande och störande tankar, samtidigt som man utvecklas både fysiskt och psykiskt. Min främsta sport är löpning, men jag tycker också om att gå långa vandringar i naturen.</p>
+      Träning är också något jag ägnar mig åt flera gånger i veckan., främst löpning, men jag tycker också om att gå långa vandringar i naturen.</p>
     </div>
     </section>
     <hr>
@@ -70,7 +70,7 @@
     <div class="text">
       <p>Några projekt jag byggt:</p>
       <span>Nyast</span>
-      <ul>
+      <ul id='portfolio'>
         <li> <a href="https://emelieha.github.io/summerplanner/">Planera din sommar</a></li>
         <li><a href="https://emelieha.github.io/kalender/">Födelsedagskalender</a></li>
          <li><a href="https://emelieha.github.io/language-app/">Language App (React)</a></li>
@@ -122,6 +122,15 @@ background-color: beige;
 
 }
 
+    #nav {
+      display: inline;
+    }
+
+    #portfolio {
+      list-style: none;
+      text-align: center;
+    }
+
 li {
 
   padding: 10px;
@@ -129,7 +138,8 @@ li {
 
     span {
       color: seagreen;
-      font-family: Cambria
+      font-family: Cambria;
+      text-align: center;
     }
 
 a {
